@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1190px;
+  height: 75px;
+
+  background-color: var(--color-text-inverse);
+  font-size: var(--text-body);
+
+  #logo {
+    margin-left: var(--spacing-4xl);
+  }
+  .menubar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 650px;
+    margin-right: var(--spacing-lg);
+  }
+}
+
+.volume_btn {
+  background-color: var(--color-brand-monday);
+  color: var(--color-text-primary);
+  border: solid 1px var(--color-text-primary);
+  padding: var(--space-10);
+  font-weight: bold;
+
+  &:hover,
+  :focus {
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+  }
+  &:focus-within {
+    background-color: var(--color-brand-monday);
+    color: var(--color-text-primary);
+    border: solid 2px var(--color-text-primary);
+  }
+}
+
+.buynow_btn {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  font-weight: bold;
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+}
