@@ -19,8 +19,8 @@
   --color-control-dark: #160a03cc;
   --color-control-light: #ffffffcc;
 
+  --color-bg-header-overlay: rgba(22, 10, 3, 0.18);
 
-  
   /* Spacing - Primitive */
 
   --space-4: 4px;
@@ -53,8 +53,7 @@
   --spacing-5xl: var(--space-96);
   --spacing-6xl: var(--space-128);
 
-
-/* Typography - Primitive */
+  /* Typography - Primitive */
 
   --font-size-11: 11px;
   --font-size-12: 12px;
@@ -91,7 +90,6 @@
   --text-display-md: var(--font-size-56);
   --text-display-lg: var(--font-size-96);
   --text-display-xl: var(--font-size-128);
-
 
   /* Radius */
 
