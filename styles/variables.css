@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inria+Serif:wght@400&family=Inter:wght@400&family=Karantina:wght@400&family=Noto+Sans+KR:wght@400;700&display=swap');
+
 :root {
   /*  Color  */
 
@@ -19,8 +21,8 @@
   --color-control-dark: #160a03cc;
   --color-control-light: #ffffffcc;
 
+  --color-bg-header-overlay: rgba(22, 10, 3, 0.18);
 
-  
   /* Spacing - Primitive */
 
   --space-4: 4px;
@@ -53,8 +55,19 @@
   --spacing-5xl: var(--space-96);
   --spacing-6xl: var(--space-128);
 
+  /* Typography - Font Family */
+  --font-family-brand: 'Inria Serif', serif;
+  --font-family-display: 'Cinzel', 'Noto Sans KR', serif;
+  --font-family-body: 'Inter', 'Noto Sans KR', sans-serif;
+  --font-family-accent: 'Karantina', 'Noto Sans KR', sans-serif;
+  --font-family-korean: 'Noto Sans KR', sans-serif;
 
-/* Typography - Primitive */
+  /* Typography - Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Typography - Primitive */
 
   --font-size-11: 11px;
   --font-size-12: 12px;
@@ -91,7 +104,6 @@
   --text-display-md: var(--font-size-56);
   --text-display-lg: var(--font-size-96);
   --text-display-xl: var(--font-size-128);
-
 
   /* Radius */
 
