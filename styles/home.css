@@ -2,6 +2,12 @@
    Common
 ========================= */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -555,29 +561,36 @@ img {
 ========================= */
 
 .city-editorial {
-  min-height: 480px;
+  width: 100%;
+  aspect-ratio: 1190 / 564;
 
   display: flex;
   align-items: flex-end;
 
-  padding: var(--spacing-3xl);
+  padding: 0 var(--spacing-4xl) var(--spacing-3xl);
 
   color: var(--color-text-inverse);
 
   background:
-    linear-gradient(rgba(22, 10, 3, 0.15), rgba(22, 10, 3, 0.55)),
+    linear-gradient(rgba(22, 10, 3, 0.15), rgba(22, 10, 3, 0.45)),
     url('../assets/images/home/home-city-banner.png') center / cover no-repeat;
+}
+
+.city-editorial__content {
+  max-width: 520px;
 }
 
 .city-editorial__title {
   margin-bottom: var(--spacing-md);
 
-  font-size: var(--text-heading-lg);
-  line-height: 1;
+  font-family: var(--font-family-display);
+  font-size: var(--text-display-md);
+  font-weight: var(--font-weight-bold);
+  line-height: 0.95;
 }
 
 .city-editorial__content p {
-  font-size: var(--text-body-sm);
+  font-size: var(--text-body);
   line-height: 1.5;
 }
 
@@ -586,7 +599,11 @@ img {
 ========================= */
 
 .products {
-  padding: var(--spacing-4xl) 0 var(--spacing-5xl);
+  padding: var(--spacing-4xl) 0 var(--spacing-6xl);
+}
+
+.products .section-inner {
+  max-width: 1020px;
 }
 
 .products__header {
@@ -603,23 +620,53 @@ img {
 }
 
 .products__header .section-title {
+  font-family: var(--font-family-display);
   font-size: var(--text-body);
+  font-weight: var(--font-weight-regular);
   line-height: 1.3;
 }
 
 .products__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
+  gap: var(--spacing-2xl);
+}
+
+.product-card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card__link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.product-card__image {
+  position: relative;
+  overflow: hidden;
+
+  aspect-ratio: 1 / 1;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.5s ease;
 }
 
 .product-card__category {
-  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   font-size: var(--text-caption);
 }
 
 .product-card__name {
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-md);
   font-size: var(--text-body-sm);
 }
 
@@ -628,18 +675,6 @@ img {
 
   color: var(--color-text-display-muted);
   font-size: var(--text-caption);
-}
-.product-card__image {
-  position: relative;
-  overflow: hidden;
-}
-
-.product-card__image img {
-  width: 100%;
-  display: block;
-  transition:
-    opacity 0.4s ease,
-    transform 0.5s ease;
 }
 
 .product-card__image-hover {
@@ -675,31 +710,40 @@ img {
 ========================= */
 
 .cta {
-  padding: var(--spacing-4xl) var(--spacing-xl);
+  min-height: 383px;
+
+  display: flex;
+  align-items: center;
+
+  padding: var(--spacing-3xl) var(--spacing-xl);
 
   color: var(--color-text-inverse);
   background: var(--color-brand-deep-brown);
 }
 
 .cta__inner {
-  width: min(100%, 1200px);
+  width: min(100% - 64px, 1020px);
   margin: 0 auto;
 }
 
 .cta__title {
-  font-size: var(--text-heading-lg);
+  font-family: var(--font-family-display);
+  font-size: var(--text-display-sm);
+  font-weight: var(--font-weight-regular);
   line-height: 0.95;
 }
 
 .cta p {
   margin-top: var(--spacing-lg);
+
   font-size: var(--text-caption);
+  line-height: 1.5;
 }
 
 .cta__link {
   display: inline-block;
 
-  margin-top: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
   padding: var(--spacing-sm) var(--spacing-lg);
 
   color: var(--color-brand-espresso);
@@ -709,25 +753,16 @@ img {
   text-decoration: none;
 }
 
-/* =========================
-   Footer
-========================= */
-
-.footer {
-  padding: var(--spacing-3xl) var(--spacing-xl);
-
-  background: var(--color-bg-footer);
+.cta__link:hover {
+  opacity: 0.8;
 }
 
-.footer__inner {
-  width: min(100%, 1200px);
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
+.cta__link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
-/* ===============================================
+/* ======================================================
    Mobile
 ========================= */
 
@@ -737,31 +772,43 @@ img {
     width: calc(100% - 48px);
   }
 
+  /* Header */
   .header {
-    height: 64px;
-    margin-bottom: -64px;
-    padding: 0 var(--spacing-lg);
+    height: 56px;
+    margin-bottom: -56px;
+    padding: 0 var(--spacing-md);
   }
 
   .header__nav-list {
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
 
   .header__logo,
   .header__nav a {
-    font-size: var(--font-size-12);
+    font-size: var(--font-size-11);
+    white-space: nowrap;
   }
 
+  /* Hero */
   .hero {
+    width: 100%;
+    min-height: 100svh;
     aspect-ratio: auto;
-    min-height: 620px;
     max-height: none;
+
+    padding: 56px var(--spacing-lg) 0;
   }
 
   .hero__title {
     font-size: var(--text-display-sm);
   }
 
+  .hero__tagline {
+    margin-top: var(--spacing-sm);
+    font-size: var(--text-caption);
+  }
+
+  /* About */
   .about,
   .collection,
   .products {
@@ -773,45 +820,163 @@ img {
     gap: var(--spacing-xl);
   }
 
-  .section-title {
-    font-size: var(--text-title);
-  }
-
   .about__media {
     order: -1;
+    margin-left: 0;
+  }
+
+  .about__media::before {
+    display: none;
+  }
+
+  .about__title {
+    font-size: var(--text-display-sm);
+  }
+
+  /* Collection */
+  #collection-title {
+    font-size: var(--text-display-sm);
+    line-height: 0.95;
+    text-align: left;
+    white-space: normal;
   }
 
   .collection__list {
-    gap: var(--spacing-4xl);
-    margin-top: var(--spacing-xl);
+    gap: var(--spacing-5xl);
+    margin-top: var(--spacing-2xl);
   }
 
-  .scent-card {
+  /* Monday / Friday 모두 1열 */
+  .scent-card,
+  .scent-card--monday,
+  .scent-card--friday {
     grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
     min-height: auto;
   }
 
-  .scent-card--friday .scent-card__content,
-  .scent-card--friday .scent-card__media {
-    order: initial;
+  /* 텍스트 영역 */
+  .scent-card--monday .scent-card__content,
+  .scent-card--friday .scent-card__content {
+    margin: 0;
+    padding: 0;
+    text-align: left;
   }
 
-  .scent-card__content {
-    padding: var(--spacing-lg) 0;
+  .scent-card--monday .scent-card__number,
+  .scent-card--friday .scent-card__number {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
-  .scent-card__media {
-    min-height: 360px;
+  .scent-card--monday .scent-card__description,
+  .scent-card--friday .scent-card__description {
+    margin-top: var(--spacing-2xl);
+    font-size: var(--text-body);
   }
 
+  .scent-card--monday .scent-card__notes,
+  .scent-card--friday .scent-card__notes {
+    margin-top: var(--spacing-xl);
+  }
+
+  .scent-card--monday .button-link,
+  .scent-card--friday .button-link {
+    margin-top: var(--spacing-xl);
+  }
+
+  /* Friday는 HTML에서 visual이 먼저라 모바일에서는 텍스트 먼저 */
+  .scent-card--friday .scent-card__content {
+    order: 0;
+  }
+
+  .scent-card--friday .scent-card__visual {
+    order: 1;
+  }
+
+  /* 콜라주 */
+  .scent-card__visual {
+    min-height: 430px;
+  }
+
+  .scent-card__visual::before {
+    top: 18%;
+    right: 6%;
+    bottom: 8%;
+    left: 18%;
+  }
+
+  .scent-card__main-image {
+    top: 12%;
+    left: 0;
+
+    width: 64%;
+    max-width: none;
+  }
+
+  .scent-card__sub-image {
+    width: 27%;
+    max-width: none;
+  }
+
+  .scent-card__sub-image--top {
+    top: 0;
+    right: 0;
+  }
+
+  .scent-card__sub-image--bottom {
+    right: 0;
+    bottom: 0;
+  }
+
+  .scent-card__arrow {
+    left: 62%;
+    bottom: 13%;
+  }
+
+  /* Friday는 콜라주 방향 반전 */
+  .scent-card--friday .scent-card__visual::before {
+    left: 6%;
+    right: 18%;
+  }
+
+  .scent-card--friday .scent-card__main-image {
+    left: auto;
+    right: 0;
+  }
+
+  .scent-card--friday .scent-card__sub-image--top,
+  .scent-card--friday .scent-card__sub-image--bottom {
+    left: 0;
+    right: auto;
+  }
+
+  .scent-card--friday .scent-card__arrow {
+    left: auto;
+    right: 62%;
+  }
+
+  /* City Editorial */
   .city-editorial {
+    width: 100%;
     min-height: 420px;
+    aspect-ratio: auto;
     padding: var(--spacing-lg);
+  }
+
+  .city-editorial__title {
+    font-size: var(--text-title);
+  }
+
+  /* Products */
+  .products .section-inner {
+    max-width: none;
   }
 
   .products__header {
     align-items: flex-start;
     flex-direction: column;
+    gap: var(--spacing-md);
   }
 
   .products__list {
@@ -819,16 +984,37 @@ img {
     gap: var(--spacing-xl);
   }
 
-  .product-card__media {
-    aspect-ratio: 1 / 1;
-  }
-
+  /* CTA */
   .cta {
+    min-height: 360px;
     padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
+  .cta__inner {
+    width: 100%;
+  }
+
+  .cta__title {
+    font-size: var(--text-title);
+  }
+
+  .cta p {
+    margin-top: var(--spacing-lg);
+    line-height: 1.5;
+  }
+
+  .cta__link {
+    margin-top: var(--spacing-xl);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
   .footer__inner {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
   }
 }
