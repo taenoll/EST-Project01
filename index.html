@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AVENUE 9</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/component.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">본문 바로가기</a>
@@ -97,40 +98,45 @@
             <!-- Monday -->
             <article class="scent-card scent-card--monday">
               <div class="scent-card__content">
-                <p class="scent-card__number">01</p>
-
-                <h3 class="scent-card__title">MONDAY 9AM</h3>
+                <div class="scent-card__heading">
+                  <p class="scent-card__number">01</p>
+                  <h3 class="scent-card__title">MONDAY 9AM</h3>
+                </div>
 
                 <p class="scent-card__description">
-                  분주한 도시에서 아침을 시작하는 <br />
+                  분주한 도시에서 아침을 시작하는<br />
                   중성적이고 정돈된 출근길.
                 </p>
 
-                <dl class="scent-card__notes">
-                  <div>
-                    <dt>TOP</dt>
-                    <dd>Bergamot · Black Pepper</dd>
-                  </div>
+                <ul class="scent-card__notes" aria-label="Monday 9AM 향 노트">
+                  <li>Bergamot</li>
+                  <li>Espresso</li>
+                  <li>Cedarwood</li>
+                </ul>
 
-                  <div>
-                    <dt>HEART</dt>
-                    <dd>Espresso · Iris</dd>
-                  </div>
-
-                  <div>
-                    <dt>BASE</dt>
-                    <dd>Cedarwood · White Musk</dd>
-                  </div>
-                </dl>
-
-                <a href="./perfume1.html" class="button-link"> VIEW DETAILS </a>
+                <a href="./perfume1.html" class="button-link">VIEW DETAILS →</a>
               </div>
 
-              <figure class="scent-card__media">
+              <figure class="scent-card__visual">
                 <img
-                  src="assets/images/monday/monday-main.png"
+                  class="scent-card__main-image"
+                  src="./assets/images/monday/monday-open.png"
                   alt="AVENUE 9 Monday 9AM 향수"
                 />
+
+                <img
+                  class="scent-card__sub-image scent-card__sub-image--top"
+                  src="./assets/images/monday/monday-back.png"
+                  alt=""
+                />
+
+                <img
+                  class="scent-card__sub-image scent-card__sub-image--bottom"
+                  src="./assets/images/monday/monday-main.png"
+                  alt=""
+                />
+
+                <span class="scent-card__arrow" aria-hidden="true">→</span>
               </figure>
             </article>
 
@@ -168,7 +174,7 @@
 
               <figure class="scent-card__media">
                 <img
-                  src="assets/images/friday/friday-main.png"
+                  src="./assets/images/friday/friday-main.png"
                   alt="AVENUE 9 New York Fridays 향수"
                 />
               </figure>
