@@ -9,6 +9,7 @@ html {
 body {
   color: var(--color-text-primary);
   background: var(--color-bg-page);
+  font-family: var(--font-family-body);
 }
 
 img {
@@ -45,13 +46,48 @@ img {
 }
 
 /* =========================
+  폰트 적용
+========================== */
+
+.header__logo,
+.footer__logo {
+  font-family: var(--font-family-brand);
+}
+
+.hero__title,
+.section-title,
+.scent-card__title,
+.city-editorial__title,
+.cta__title {
+  font-family: var(--font-family-display);
+}
+
+.about__slogan {
+  margin-top: var(--spacing-xl);
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-heading-sm);
+  line-height: 1.1;
+}
+
+.about__title {
+  color: var(--color-text-display-muted);
+  font-size: var(--font-size-85);
+  font-weight: var(--font-weight-regular);
+  line-height: 0.85;
+}
+
+/* ============================================================
    Header
-========================= */
+============================================================ */
 
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
+
+  width: 100%;
+  box-sizing: border-box;
 
   display: flex;
   align-items: center;
@@ -97,7 +133,11 @@ img {
 
 /* Hero */
 .hero {
-  min-height: 100svh;
+  width: 100%;
+  aspect-ratio: 1190 / 882;
+  max-height: 882px;
+  min-height: 700px;
+
   display: grid;
   place-items: center;
   padding: 72px var(--spacing-xl) 0;
@@ -165,9 +205,26 @@ img {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  align-items: center;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
   gap: var(--spacing-3xl);
+}
+
+.about__media {
+  position: relative;
+  margin-left: calc(var(--spacing-3xl) * -1);
+}
+
+.about__media::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 20%;
+
+  background: linear-gradient(to right, var(--color-bg-page), transparent);
+
+  z-index: 1;
+  pointer-events: none;
 }
 
 .about__content {
@@ -197,35 +254,28 @@ img {
   line-height: 1.1;
 }
 
-.about__media img {
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.text-link {
-  display: inline-block;
-
-  margin-top: var(--spacing-xl);
-
-  color: inherit;
-  font-size: var(--text-caption);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* =========================
+/* =================================================
    Collection
-========================= */
+============================== */
 
 .collection {
   padding: var(--spacing-5xl) 0;
 }
 
+#collection-title {
+  color: var(--color-text-display-muted);
+  font-family: var(--font-family-display);
+  font-size: var(--text-display-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
 .collection__list {
   display: grid;
   gap: var(--spacing-6xl);
-
-  margin-top: var(--spacing-4xl);
+  margin-top: var(--spacing-lg);
 }
 
 .scent-card {
@@ -234,18 +284,6 @@ img {
   align-items: center;
 
   min-height: 600px;
-}
-
-.scent-card--friday .scent-card__content {
-  order: 2;
-}
-
-.scent-card--friday .scent-card__media {
-  order: 1;
-}
-
-.scent-card__content {
-  padding: var(--spacing-xl);
 }
 
 .scent-card__number {
@@ -299,16 +337,217 @@ img {
   object-fit: contain;
 }
 
-.button-link {
-  display: inline-block;
+/* Monday 레이아웃 만지기 */
+.scent-card--monday {
+  grid-template-columns: 280px 1fr;
+  align-items: start;
+  gap: var(--spacing-xl);
 
-  padding: var(--spacing-sm) var(--spacing-lg);
+  min-height: 700px;
+}
 
-  color: var(--color-text-inverse);
-  background: var(--color-brand-espresso);
+.scent-card--monday .scent-card__content {
+  padding: 0;
+  margin-left: var(--spacing-3xl);
+}
 
-  font-size: var(--text-caption);
-  text-decoration: none;
+.scent-card--monday .scent-card__number {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-family-display);
+  font-size: var(--text-body);
+}
+
+.scent-card--monday .scent-card__number::after {
+  content: '';
+  width: 94px;
+  border-top: 1px solid currentColor;
+}
+
+.scent-card--monday .scent-card__title {
+  margin-bottom: 0;
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-heading-lg);
+  font-weight: var(--font-weight-regular);
+}
+
+.scent-card--monday .scent-card__description {
+  margin-top: var(--spacing-5xl);
+  margin-bottom: 0;
+
+  font-size: var(--text-label);
+  line-height: 1.5;
+}
+
+.scent-card--monday .scent-card__notes {
+  display: grid;
+  gap: var(--spacing-xs);
+
+  margin-top: var(--spacing-5xl);
+  margin-bottom: 0;
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-body);
+}
+
+.scent-card--monday .button-link {
+  margin-top: var(--spacing-5xl);
+}
+
+.scent-card__visual {
+  position: relative;
+  min-height: 700px;
+}
+
+/* Friday 레이아웃 만지기 위랑 거의 반복 */
+
+.scent-card--friday {
+  grid-template-columns: 1fr 315px;
+  align-items: start;
+  gap: var(--spacing-2xl);
+
+  min-height: 700px;
+}
+
+.scent-card--friday .scent-card__content {
+  padding: 0;
+  margin-right: var(--spacing-3xl);
+  text-align: right;
+}
+
+.scent-card--friday .scent-card__number {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: var(--spacing-md);
+
+  margin-bottom: var(--spacing-xs);
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-body);
+}
+
+.scent-card--friday .scent-card__number::after {
+  content: '';
+  width: 94px;
+  border-top: 1px solid currentColor;
+}
+
+.scent-card--friday .scent-card__title {
+  margin-bottom: 0;
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-heading-lg);
+  font-weight: var(--font-weight-regular);
+}
+
+.scent-card--friday .scent-card__description {
+  margin-top: var(--spacing-5xl);
+  margin-bottom: 0;
+
+  font-size: var(--text-label);
+  line-height: 1.5;
+}
+
+.scent-card--friday .scent-card__notes {
+  display: grid;
+  gap: var(--spacing-xs);
+
+  margin-top: var(--spacing-5xl);
+  margin-bottom: 0;
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-body);
+}
+
+.scent-card--friday .button-link {
+  margin-top: var(--spacing-5xl);
+}
+
+.scent-card--friday .scent-card__visual::before {
+  left: -5%;
+  right: 22%;
+}
+
+.scent-card--friday .scent-card__main-image {
+  left: auto;
+  right: 0;
+}
+
+.scent-card--friday .scent-card__sub-image--top {
+  left: 0;
+  right: auto;
+}
+
+.scent-card--friday .scent-card__sub-image--bottom {
+  left: 0;
+  right: auto;
+}
+
+.scent-card--friday .scent-card__arrow {
+  left: auto;
+  right: 58%;
+}
+
+/* 피그마에 있는 얇은 선 프레임 */
+.scent-card__visual::before {
+  content: '';
+  position: absolute;
+
+  top: 18%;
+  right: -5%;
+  bottom: 10%;
+  left: 22%;
+
+  border: 1px solid var(--color-text-display-muted);
+  opacity: 0.5;
+}
+.scent-card__main-image {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  z-index: 2;
+
+  width: 58%;
+  max-width: 550px;
+}
+
+.scent-card__sub-image {
+  position: absolute;
+  z-index: 2;
+
+  width: 28%;
+  max-width: 268px;
+}
+
+.scent-card__sub-image--top {
+  top: 0;
+  right: 0;
+}
+
+.scent-card__sub-image--bottom {
+  right: 0;
+  bottom: 0;
+}
+
+.scent-card__arrow {
+  position: absolute;
+  left: 58%;
+  bottom: 16%;
+  z-index: 3;
+
+  display: grid;
+  place-items: center;
+
+  width: 32px;
+  aspect-ratio: 1;
+
+  border: 1px solid currentColor;
+  border-radius: var(--radius-full);
 }
 
 /* =========================
@@ -374,20 +613,12 @@ img {
   gap: var(--spacing-md);
 }
 
-.product-card__media {
-  aspect-ratio: 4 / 5;
-}
-
-.product-card__media--placeholder {
-  background: var(--color-surface-product);
-}
-
 .product-card__category {
   margin-top: var(--spacing-md);
   font-size: var(--text-caption);
 }
 
-.product-card__title {
+.product-card__name {
   margin-top: var(--spacing-xs);
   font-size: var(--text-body-sm);
 }
@@ -423,6 +654,18 @@ img {
 }
 
 .product-card:hover .product-card__image-hover {
+  opacity: 1;
+  transform: scale(1.04) rotate(1deg);
+}
+
+/* 접근성 위해 탭으로 진입 가능하게! */
+
+.product-card:focus-within .product-card__image-default {
+  opacity: 0;
+  transform: scale(1.03) rotate(-1deg);
+}
+
+.product-card:focus-within .product-card__image-hover {
   opacity: 1;
   transform: scale(1.04) rotate(1deg);
 }
@@ -482,23 +725,9 @@ img {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  gap: var(--spacing-lg);
 }
 
-.footer__logo {
-  color: inherit;
-  font-size: var(--text-heading-sm);
-  text-decoration: none;
-}
-
-.footer p,
-.footer small {
-  font-size: var(--text-caption);
-}
-
-/* =========================
+/* ===============================================
    Mobile
 ========================= */
 
@@ -524,8 +753,9 @@ img {
   }
 
   .hero {
-    min-height: 100svh;
-    padding-top: 64px;
+    aspect-ratio: auto;
+    min-height: 620px;
+    max-height: none;
   }
 
   .hero__title {
