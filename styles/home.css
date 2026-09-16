@@ -95,32 +95,61 @@ img {
    Hero
 ========================= */
 
+/* Hero */
 .hero {
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
   padding: 72px var(--spacing-xl) 0;
 
   color: var(--color-text-inverse);
-  text-align: center;
 
   background:
-    linear-gradient(rgba(22, 10, 3, 0.25), rgba(22, 10, 3, 0.25)),
+    linear-gradient(rgba(22, 10, 3, 0.18), rgba(22, 10, 3, 0.18)),
     url('../assets/images/home/home-hero-city.png') center / cover no-repeat;
 }
 
-.hero__title {
-  font-size: var(--text-display-lg);
-  line-height: 0.9;
+.hero__content {
+  text-align: center;
 }
 
-.hero__description {
+.hero__title {
+  margin: 0;
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-display-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.hero__tagline {
   margin-top: var(--spacing-md);
+
+  font-family: var(--font-family-display);
   font-size: var(--text-body);
-  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+}
+
+.hero__link {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-lg);
+
+  color: var(--color-text-inverse);
+  font-family: var(--font-family-body);
+  font-size: var(--text-caption);
+  text-decoration: none;
+
+  border: 1px solid currentColor;
+}
+
+.hero__link:hover {
+  opacity: 0.7;
+}
+
+.hero__link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
 /* =========================
@@ -368,6 +397,34 @@ img {
 
   color: var(--color-text-display-muted);
   font-size: var(--text-caption);
+}
+.product-card__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card__image img {
+  width: 100%;
+  display: block;
+  transition:
+    opacity 0.4s ease,
+    transform 0.5s ease;
+}
+
+.product-card__image-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.product-card:hover .product-card__image-default {
+  opacity: 0;
+  transform: scale(1.03) rotate(-1deg);
+}
+
+.product-card:hover .product-card__image-hover {
+  opacity: 1;
+  transform: scale(1.04) rotate(1deg);
 }
 
 /* =========================
