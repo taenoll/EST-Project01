@@ -374,20 +374,25 @@ img {
   gap: var(--spacing-md);
 }
 
-.product-card__media {
+/* .product-card__media {
   aspect-ratio: 4 / 5;
 }
 
 .product-card__media--placeholder {
   background: var(--color-surface-product);
-}
+} */
 
 .product-card__category {
   margin-top: var(--spacing-md);
   font-size: var(--text-caption);
 }
 
-.product-card__title {
+/* .product-card__title {
+  margin-top: var(--spacing-xs);
+  font-size: var(--text-body-sm);
+} */
+
+.product-card__name {
   margin-top: var(--spacing-xs);
   font-size: var(--text-body-sm);
 }
@@ -423,6 +428,18 @@ img {
 }
 
 .product-card:hover .product-card__image-hover {
+  opacity: 1;
+  transform: scale(1.04) rotate(1deg);
+}
+
+/* 접근성 위해 탭으로 진입 가능하게! */
+
+.product-card:focus-within .product-card__image-default {
+  opacity: 0;
+  transform: scale(1.03) rotate(-1deg);
+}
+
+.product-card:focus-within .product-card__image-hover {
   opacity: 1;
   transform: scale(1.04) rotate(1deg);
 }
