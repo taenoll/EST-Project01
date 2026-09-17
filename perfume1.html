@@ -12,12 +12,21 @@
   </head>
   <body>
     <header class="header">
-      <div id="logo">AVENUE 9</div>
-      <div class="menubar">
-        <span>ABOUT</span>
-        <span>COLLECTION</span>
-        <span>PRODUCT</span>
-      </div>
+      <a href="./index.html" class="header__logo">AVENUE 9</a>
+
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <ul class="header__nav-list">
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#collection">COLLECTIONS</a>
+          </li>
+          <li>
+            <a href="#products">PRODUCTS</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main_container">
@@ -114,62 +123,70 @@
     <section class="ingredients" id="ingredients">
       <div class="note_container">
         <div class="notes">
-          <img
-            src="./assets/images/collection/Monday 9AM/blackpepper.png"
-            class="blackpepper"
-            alt="블랙페퍼 알갱이 덩어리"
-          />
-          <div>
+          <div class="img_container">
+            <img
+              src="./assets/images/collection/Monday 9AM/blackpepper.png"
+              class="blackpepper"
+              alt="블랙페퍼 알갱이 덩어리"
+            />
+            <img
+              src="./assets/images/collection/Monday 9AM/bergamot.png"
+              class="bergamot"
+              alt="베르가못 반 개 슬라이스가 물에 젖어 물방울이 아래로 떨어지려 하는 모습"
+            />
+          </div>
+          <div class="middle_description">
             <h3>BLACK PEPPER · BERGAMOT</h3>
             <p>
               차갑고 선명한 베르가못에 블랙페퍼가<br />
               더해져 강렬하게 시작되는 아침
             </p>
           </div>
-          <img
-            src="./assets/images/collection/Monday 9AM/bergamot.png"
-            class="bergamot"
-            alt="베르가못 반 개 슬라이스가 물에 젖어 물방울이 아래로 떨어지려 하는 모습"
-          />
         </div>
+
         <div class="notes">
-          <img
-            src=""
-            class="espresso"
-            alt="에스프레소와 얼음이 함께 들어있는 투명 둥근 컵의 윗모습"
-          />
-          <div>
+          <div class="img_container">
+            <img
+              src="./assets/images/collection/Monday 9AM/espresso.png"
+              class="espresso"
+              alt="에스프레소와 얼음이 함께 들어있는 투명 둥근 컵의 윗모습"
+            />
+            <img
+              src="./assets/images/collection/Monday 9AM/blackberry.png"
+              class="blackberry"
+              alt="블랙베리 한 알의 정면모습"
+            />
+          </div>
+          <div class="middle_description">
             <h3>ESPRESSO · BLACKBERRY</h3>
             <p>
               쌉싸름한 에스프레소와 은은한 블랙베리가<br />
               어우러져 세련되고 깊이 있는 분위기
             </p>
           </div>
-          <img
-            src="./assets/images/collection/Monday 9AM/blackberry.png"
-            class="blackberry"
-            alt="블랙베리 한 알의 정면모습"
-          />
         </div>
+
         <div class="notes">
-          <img
-            src="./assets/images/collection/Monday 9AM/whitemusk.png"
-            class="whitemusk"
-            alt="활짝 핀 화이트 머스크 흰 꽃의 윗모습"
-          />
-          <div>
+          <div class="img_container">
+            <img
+              src="./assets/images/collection/Monday 9AM/whitemusk.png"
+              class="whitemusk"
+              alt="활짝 핀 화이트 머스크 흰 꽃의 윗모습"
+            />
+            <img
+              src="./assets/images/collection/Monday 9AM/cedarwood.png"
+              class="cedarwood"
+              alt="나무 원목의 단면"
+              width="360px"
+            />
+          </div>
+          <div class="middle_description">
             <h3>WHITE MUSK · CEDARWOOD</h3>
             <p>
               드라이한 우디 향과 깨끗한 화이트 머스크가<br />
               세련되고 중성적인 잔향
             </p>
           </div>
-          <img
-            src="./assets/images/collection/Monday 9AM/cedarwood.png"
-            class="cedarwood"
-            alt="나무 원목의 단면"
-            width="360px"
-          />
         </div>
       </div>
     </section>
