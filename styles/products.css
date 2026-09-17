@@ -1,0 +1,23 @@
+.body {
+  background-color: var(--color-bg-page);
+}
+
+.volume_btn {
+  background-color: var(--color-text-inverse);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-accent);
+  font-size: var(--text-label);
+  border: solid 1px var(--color-text-primary);
+  padding: var(--spacing-sm);
+
+  &:hover,
+  :focus {
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+  }
+  &:focus-within {
+    background-color: var(--color-text-inverse);
+    color: var(--color-text-primary);
+    border: solid 2px var(--color-text-primary);
+  }
+}
