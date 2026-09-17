@@ -281,7 +281,6 @@ img {
   font-weight: var(--font-weight-bold);
   line-height: 1;
   text-align: center;
-  white-space: nowrap;
 }
 
 .collection__list {
