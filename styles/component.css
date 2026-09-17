@@ -2,26 +2,40 @@
    Header
 ========================= */
 .header {
+  box-sizing: border-box;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
   height: 72px;
+  padding: 0 var(--spacing-4xl);
 
   background-color: var(--color-text-inverse);
   font-size: var(--text-body);
-
-  #logo {
-    margin-left: var(--spacing-4xl);
-  }
-  .menubar {
-    display: flex;
-    justify-content: space-evenly;
-    width: 650px;
-    margin-right: var(--spacing-lg);
-  }
 }
 
+.header__logo {
+  color: inherit;
+  font-family: var(--font-family-brand);
+  text-decoration: none;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4xl);
+}
+
+.header__nav a {
+  color: inherit;
+  text-decoration: none;
+}
+/*뭔가 어디에서 적용되고 있는 것 같은데 원인을 못 찾아서 일단 초기화시킴*/
+.header__nav {
+  padding: 0;
+}
 /* =========================
    Buttons
 ========================= */
