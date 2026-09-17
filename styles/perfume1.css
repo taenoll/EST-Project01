@@ -1,8 +1,11 @@
+/* =========================
+    Main - perfume card
+========================= */
+.main_container {
+  justify-content: flex-end;
+}
 .perfume_card {
   position: absolute;
-  top: 47%;
-  left: 55%;
-  transform: translate(0, -47%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,9 +15,11 @@
   background-color: var(--color-brand-monday);
   padding: var(--spacing-lg) 0;
   width: 300px;
-  height: 470px;
+  height: 530px;
+  margin-right: 150px;
 
   h2 {
+    font-family: var(--font-family-display);
     font-size: var(--text-heading-md);
     font-weight: bold;
     padding: var(--space-10);
@@ -26,24 +31,64 @@
     gap: var(--spacing-sm);
     width: max-content;
     height: 75px;
+  }
 
-    .volume_btn {
+  .volume_btn {
+    background-color: var(--color-brand-monday);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-accent);
+    font-size: var(--text-label);
+    border: solid 1px var(--color-text-primary);
+    padding: var(--spacing-sm);
+
+    &:hover,
+    :focus {
+      background-color: var(--color-text-primary);
+      color: var(--color-text-inverse);
+    }
+    &:focus-within {
       background-color: var(--color-brand-monday);
       color: var(--color-text-primary);
-      border: solid 1px var(--color-text-primary);
-      padding: var(--space-10);
-      font-weight: bold;
-
-      &:hover,
-      :focus {
-        background-color: var(--color-text-primary);
-        color: var(--color-text-inverse);
-      }
-      &:focus-within {
-        background-color: var(--color-brand-monday);
-        color: var(--color-text-primary);
-        border: solid 2px var(--color-text-primary);
-      }
+      border: solid 2px var(--color-text-primary);
     }
+  }
+}
+
+/* =========================
+    Details
+========================= */
+.details {
+  place-items: center;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-5xl);
+
+  .details_container {
+    background-color: var(--color-brand-monday);
+    width: 1135px;
+    height: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* =========================
+    Description
+========================= */
+.description {
+  background-color: var(--color-brand-monday);
+  color: var(--color-text-inverse);
+  font-family: var(--font-family-display);
+  font-weight: bold;
+  text-align: center;
+  height: 665px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: var(--spacing-2xl);
+  font-size: var(--text-label);
+  span {
+    text-decoration: underline;
   }
 }
