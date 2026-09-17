@@ -162,6 +162,7 @@ Flexbox의 space-between만 사용했을 때 가운데 텍스트가 정확한 �
 
 ## 폴더 구조
 
+```
 EST-Project01/
 ├── assets/
 │ └── images/
@@ -180,6 +181,7 @@ EST-Project01/
 ├── perfume2.html
 ├── products.html
 └── README.md
+```
 
 ---
 
