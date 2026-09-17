@@ -133,13 +133,7 @@ Mobile에서는 텍스트와 이미지를 위에서 아래로 읽을 수 있도�
 키보드 사용자가 반복되는 Header 메뉴를 거치지 않고
 본문으로 바로 이동할 수 있도록 Skip Link를 추가했습니다.
 
-3. Skip Link
-
-키보드 사용자가 반복되는 Header 메뉴를 거치지 않고
-본문으로 바로 이동할 수 있도록 Skip Link를 추가했습니다.
-
 ```
-
 <a href="#main-content" class="skip-link">본문 바로가기</a>
 
 <main id="main-content" tabindex="-1">
