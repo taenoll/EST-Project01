@@ -299,67 +299,57 @@ img {
 }
 
 .scent-card__number {
-  margin-bottom: var(--spacing-md);
-  font-size: var(--text-caption);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+
+  margin-bottom: var(--spacing-xs);
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-body);
+}
+
+.scent-card__number::after {
+  content: '';
+  width: 94px;
+  border-top: 1px solid currentColor;
 }
 
 .scent-card__title {
-  margin-bottom: var(--spacing-lg);
+  margin: 0;
+
+  font-family: var(--font-family-display);
   font-size: var(--text-heading-lg);
+  font-weight: var(--font-weight-regular);
 }
 
 .scent-card__description {
-  margin-bottom: var(--spacing-xl);
+  margin: var(--spacing-5xl) 0 0;
 
-  font-size: var(--text-body);
+  font-size: var(--text-label);
   line-height: 1.5;
 }
 
 .scent-card__notes {
   display: grid;
-  gap: var(--spacing-md);
+  gap: var(--spacing-xs);
 
-  margin-bottom: var(--spacing-xl);
+  margin: var(--spacing-5xl) 0 0;
+
+  font-family: var(--font-family-display);
+  font-size: var(--text-body);
 }
 
-.scent-card__notes div {
-  display: grid;
-  gap: var(--spacing-2xs);
-}
-
-.scent-card__notes dt {
-  font-size: var(--text-caption);
-}
-
-.scent-card__notes dd {
-  font-size: var(--text-body-sm);
-}
-
-.scent-card__media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 520px;
-}
-
-.scent-card__media img {
-  width: min(80%, 500px);
-  max-height: 560px;
-  object-fit: contain;
+.scent-card .button-link {
+  margin-top: var(--spacing-5xl);
 }
 
 /* Monday 레이아웃 만지기 */
 .scent-card--monday {
   grid-template-columns: 280px 1fr;
-  align-items: start;
-  gap: var(--spacing-xl);
-
-  min-height: 700px;
 }
 
 .scent-card--monday .scent-card__content {
-  padding: 0;
   margin-left: var(--spacing-3xl);
 }
 
@@ -388,26 +378,17 @@ img {
 }
 
 .scent-card--monday .scent-card__description {
-  margin-top: var(--spacing-5xl);
-  margin-bottom: 0;
-
   font-size: var(--text-label);
   line-height: 1.5;
+  margin: 0 0 var(--spacing-5xl);
 }
 
 .scent-card--monday .scent-card__notes {
   display: grid;
   gap: var(--spacing-xs);
 
-  margin-top: var(--spacing-5xl);
-  margin-bottom: 0;
-
   font-family: var(--font-family-display);
   font-size: var(--text-body);
-}
-
-.scent-card--monday .button-link {
-  margin-top: var(--spacing-5xl);
 }
 
 .scent-card__visual {
@@ -415,32 +396,27 @@ img {
   min-height: 700px;
 }
 
+.scent-card__heading {
+  margin-bottom: var(--spacing-5xl);
+}
+
+.scent-card__notes {
+  margin: 0 0 var(--spacing-5xl);
+}
+
 /* Friday 레이아웃 만지기 위랑 거의 반복 */
 
 .scent-card--friday {
   grid-template-columns: 1fr 315px;
-  align-items: start;
-  gap: var(--spacing-2xl);
-
-  min-height: 700px;
 }
 
 .scent-card--friday .scent-card__content {
-  padding: 0;
   margin-right: var(--spacing-3xl);
   text-align: right;
 }
 
 .scent-card--friday .scent-card__number {
-  display: flex;
   flex-direction: row-reverse;
-  align-items: center;
-  gap: var(--spacing-md);
-
-  margin-bottom: var(--spacing-xs);
-
-  font-family: var(--font-family-display);
-  font-size: var(--text-body);
 }
 
 .scent-card--friday .scent-card__number::after {
@@ -730,6 +706,11 @@ img {
 .cta__inner {
   width: min(100% - 64px, 1020px);
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
 }
 
 .cta__title {
@@ -739,12 +720,12 @@ img {
   line-height: 0.95;
 }
 
-.cta p {
+/* .cta p {
   margin-top: var(--spacing-lg);
 
   font-size: var(--text-caption);
   line-height: 1.5;
-}
+} */
 
 .cta__link {
   display: inline-block;
