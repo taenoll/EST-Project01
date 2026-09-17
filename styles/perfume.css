@@ -98,29 +98,31 @@ nav {
 .ingredients {
   background-color: var(--color-text-inverse);
   font-family: var(--font-family-display);
-  .note_container {
-    display: grid;
-    grid-template-rows: repeat(3, minmax(390, 1fr));
-    gap: 0;
-    margin-bottom: var(--spacing-5xl);
-  }
   .notes {
+    position: relative;
+    .middle_description {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      align-self: center;
+      text-align: center;
+      font-size: var(--text-heading-sm);
+    }
+  }
+  .img_container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
-  div {
-    align-self: center;
-    text-align: center;
-    font-size: var(--text-label);
-
-    h3 {
-      font-weight: bold;
-      margin-bottom: var(--spacing-2xl);
-    }
-    p {
-      line-height: var(--spacing-xl);
-    }
+  h3 {
+    font-weight: bold;
+    margin-bottom: var(--spacing-2xl);
+  }
+  p {
+    line-height: var(--spacing-xl);
   }
 }
 
