@@ -30,7 +30,7 @@
       </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
       <!-- Hero -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__content">
@@ -140,7 +140,6 @@
               </figure>
             </article>
 
-            <!-- Friday -->
             <!-- Friday -->
             <article class="scent-card scent-card--friday">
               <figure class="scent-card__visual">
@@ -315,11 +314,12 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer__inner">
-        <a href="./index.html" class="footer__logo"> AVENUE 9 </a>
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">AVENUE 9</a>
+          <p class="footer__tagline">Everyday scent, made for the city.</p>
+        </div>
 
-        <p>Everyday scent, made for the city.</p>
-
-        <small>© 2026 AVENUE 9</small>
+        <small class="footer__copyright">© 2026 AVENUE 9</small>
       </div>
     </footer>
   </body>

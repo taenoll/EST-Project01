@@ -55,7 +55,7 @@ header {
   공통 검정 버튼 링크
   사용 예:
   - HOME Collection : VIEW DETAILS →
-  - 상세 페이지 CTA 등에 재사용 가능
+  - 상세 페이지 CTA?
 */
 .button-link {
   display: inline-block;
@@ -73,8 +73,9 @@ header {
 }
 
 .button-link:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 4px;
+  outline: 2px solid var(--color-text-inverse);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-text-primary);
 }
 
 /*
@@ -117,7 +118,7 @@ header {
   - 슬로건
   - 저작권 표시
 
-  추가 내용 확정 시 이 컴포넌트에서 수정할 예정이에요!
+  추가 내용 덧붙일 거 없을 것 같아서 여기에서 마무리했어요!
 */
 .footer {
   padding: var(--spacing-3xl) var(--spacing-xl);
