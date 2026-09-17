@@ -224,7 +224,7 @@ img {
 
 .about__media {
   position: relative;
-  margin-left: calc(var(--spacing-3xl) * -1);
+  margin-left: calc(var(--spacing-xl) * -1);
 }
 
 .about__media::before {
@@ -281,7 +281,6 @@ img {
   font-weight: var(--font-weight-bold);
   line-height: 1;
   text-align: center;
-  white-space: nowrap;
 }
 
 .collection__list {
@@ -292,10 +291,13 @@ img {
 
 .scent-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
+  min-height: 700px;
+}
 
-  min-height: 600px;
+/* 향수 정보 공통 */
+.scent-card__heading {
+  margin-bottom: var(--spacing-5xl);
 }
 
 .scent-card__number {
@@ -316,15 +318,13 @@ img {
 }
 
 .scent-card__title {
-  margin: 0;
-
   font-family: var(--font-family-display);
   font-size: var(--text-heading-lg);
   font-weight: var(--font-weight-regular);
 }
 
 .scent-card__description {
-  margin: var(--spacing-5xl) 0 0;
+  margin-bottom: var(--spacing-5xl);
 
   font-size: var(--text-label);
   line-height: 1.5;
@@ -334,80 +334,26 @@ img {
   display: grid;
   gap: var(--spacing-xs);
 
-  margin: var(--spacing-5xl) 0 0;
+  margin-bottom: var(--spacing-5xl);
 
   font-family: var(--font-family-display);
   font-size: var(--text-body);
 }
 
-.scent-card .button-link {
-  margin-top: var(--spacing-5xl);
-}
-
-/* Monday 레이아웃 만지기 */
+/* Monday */
 .scent-card--monday {
   grid-template-columns: 280px 1fr;
+  gap: var(--spacing-xl);
 }
 
 .scent-card--monday .scent-card__content {
   margin-left: var(--spacing-3xl);
 }
 
-.scent-card--monday .scent-card__number {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-
-  margin-bottom: var(--spacing-xs);
-  font-family: var(--font-family-display);
-  font-size: var(--text-body);
-}
-
-.scent-card--monday .scent-card__number::after {
-  content: '';
-  width: 94px;
-  border-top: 1px solid currentColor;
-}
-
-.scent-card--monday .scent-card__title {
-  margin-bottom: 0;
-
-  font-family: var(--font-family-display);
-  font-size: var(--text-heading-lg);
-  font-weight: var(--font-weight-regular);
-}
-
-.scent-card--monday .scent-card__description {
-  font-size: var(--text-label);
-  line-height: 1.5;
-  margin: 0 0 var(--spacing-5xl);
-}
-
-.scent-card--monday .scent-card__notes {
-  display: grid;
-  gap: var(--spacing-xs);
-
-  font-family: var(--font-family-display);
-  font-size: var(--text-body);
-}
-
-.scent-card__visual {
-  position: relative;
-  min-height: 700px;
-}
-
-.scent-card__heading {
-  margin-bottom: var(--spacing-5xl);
-}
-
-.scent-card__notes {
-  margin: 0 0 var(--spacing-5xl);
-}
-
-/* Friday 레이아웃 만지기 위랑 거의 반복 */
-
+/* Friday */
 .scent-card--friday {
   grid-template-columns: 1fr 315px;
+  gap: var(--spacing-2xl);
 }
 
 .scent-card--friday .scent-card__content {
@@ -419,69 +365,12 @@ img {
   flex-direction: row-reverse;
 }
 
-.scent-card--friday .scent-card__number::after {
-  content: '';
-  width: 94px;
-  border-top: 1px solid currentColor;
+/* 이미지 콜라주 */
+.scent-card__visual {
+  position: relative;
+  min-height: 700px;
 }
 
-.scent-card--friday .scent-card__title {
-  margin-bottom: 0;
-
-  font-family: var(--font-family-display);
-  font-size: var(--text-heading-lg);
-  font-weight: var(--font-weight-regular);
-}
-
-.scent-card--friday .scent-card__description {
-  margin-top: var(--spacing-5xl);
-  margin-bottom: 0;
-
-  font-size: var(--text-label);
-  line-height: 1.5;
-}
-
-.scent-card--friday .scent-card__notes {
-  display: grid;
-  gap: var(--spacing-xs);
-
-  margin-top: var(--spacing-5xl);
-  margin-bottom: 0;
-
-  font-family: var(--font-family-display);
-  font-size: var(--text-body);
-}
-
-.scent-card--friday .button-link {
-  margin-top: var(--spacing-5xl);
-}
-
-.scent-card--friday .scent-card__visual::before {
-  left: -5%;
-  right: 22%;
-}
-
-.scent-card--friday .scent-card__main-image {
-  left: auto;
-  right: 0;
-}
-
-.scent-card--friday .scent-card__sub-image--top {
-  left: 0;
-  right: auto;
-}
-
-.scent-card--friday .scent-card__sub-image--bottom {
-  left: 0;
-  right: auto;
-}
-
-.scent-card--friday .scent-card__arrow {
-  left: auto;
-  right: 58%;
-}
-
-/* 피그마에 있는 얇은 선 프레임 */
 .scent-card__visual::before {
   content: '';
   position: absolute;
@@ -494,6 +383,7 @@ img {
   border: 1px solid var(--color-text-display-muted);
   opacity: 0.5;
 }
+
 .scent-card__main-image {
   position: absolute;
   top: 12%;
@@ -536,6 +426,28 @@ img {
 
   border: 1px solid currentColor;
   border-radius: var(--radius-full);
+}
+
+/* Friday 이미지 반전(위치) */
+.scent-card--friday .scent-card__visual::before {
+  left: -5%;
+  right: 22%;
+}
+
+.scent-card--friday .scent-card__main-image {
+  left: auto;
+  right: 0;
+}
+
+.scent-card--friday .scent-card__sub-image--top,
+.scent-card--friday .scent-card__sub-image--bottom {
+  left: 0;
+  right: auto;
+}
+
+.scent-card--friday .scent-card__arrow {
+  left: auto;
+  right: 58%;
 }
 
 /* =========================
@@ -720,17 +632,14 @@ img {
   line-height: 0.95;
 }
 
-/* .cta p {
-  margin-top: var(--spacing-lg);
-
+.cta p {
   font-size: var(--text-caption);
   line-height: 1.5;
-} */
+}
 
 .cta__link {
   display: inline-block;
 
-  margin-top: var(--spacing-xl);
   padding: var(--spacing-sm) var(--spacing-lg);
 
   color: var(--color-brand-espresso);
@@ -773,7 +682,6 @@ img {
   .header__logo,
   .header__nav a {
     font-size: var(--font-size-11);
-    white-space: nowrap;
   }
 
   /* Hero */
@@ -856,20 +764,17 @@ img {
     justify-content: flex-start;
   }
 
-  .scent-card--monday .scent-card__description,
-  .scent-card--friday .scent-card__description {
-    margin-top: var(--spacing-2xl);
+  .scent-card__heading {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .scent-card__description {
+    margin-bottom: var(--spacing-xl);
     font-size: var(--text-body);
   }
 
-  .scent-card--monday .scent-card__notes,
-  .scent-card--friday .scent-card__notes {
-    margin-top: var(--spacing-xl);
-  }
-
-  .scent-card--monday .button-link,
-  .scent-card--friday .button-link {
-    margin-top: var(--spacing-xl);
+  .scent-card__notes {
+    margin-bottom: var(--spacing-xl);
   }
 
   /* Friday는 HTML에서 visual이 먼저라 모바일에서는 텍스트 먼저 */
@@ -983,15 +888,6 @@ img {
 
   .cta__title {
     font-size: var(--text-title);
-  }
-
-  .cta p {
-    margin-top: var(--spacing-lg);
-    line-height: 1.5;
-  }
-
-  .cta__link {
-    margin-top: var(--spacing-xl);
   }
 
   /* Footer */
