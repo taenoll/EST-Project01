@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AVENUE 9</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/component.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">본문 바로가기</a>
@@ -29,7 +30,7 @@
       </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
       <!-- Hero -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__content">
@@ -77,7 +78,7 @@
 
           <figure class="about__media">
             <img
-              src="/assets/images/home/home-about-office.png"
+              src="./assets/images/home/home-about-office.png"
               alt="도시의 창가에서 일하는 여성"
             />
           </figure>
@@ -97,81 +98,94 @@
             <!-- Monday -->
             <article class="scent-card scent-card--monday">
               <div class="scent-card__content">
-                <p class="scent-card__number">01</p>
-
-                <h3 class="scent-card__title">MONDAY 9AM</h3>
+                <div class="scent-card__heading">
+                  <p class="scent-card__number">01</p>
+                  <h3 class="scent-card__title">MONDAY 9AM</h3>
+                </div>
 
                 <p class="scent-card__description">
-                  A busy city morning at 9AM.<br />
-                  A confident stride that resembles the pace of the city.
+                  분주한 도시에서 아침을 시작하는<br />
+                  중성적이고 정돈된 출근길.
                 </p>
 
-                <dl class="scent-card__notes">
-                  <div>
-                    <dt>TOP</dt>
-                    <dd>Bergamot · Black Pepper</dd>
-                  </div>
+                <ul class="scent-card__notes" aria-label="Monday 9AM 향 노트">
+                  <li>Bergamot</li>
+                  <li>Espresso</li>
+                  <li>Cedarwood</li>
+                </ul>
 
-                  <div>
-                    <dt>HEART</dt>
-                    <dd>Espresso · Iris</dd>
-                  </div>
-
-                  <div>
-                    <dt>BASE</dt>
-                    <dd>Cedarwood · White Musk</dd>
-                  </div>
-                </dl>
-
-                <a href="./perfume1.html" class="button-link"> VIEW DETAILS </a>
+                <a href="./perfume1.html" class="button-link">VIEW DETAILS →</a>
               </div>
 
-              <figure class="scent-card__media">
+              <figure class="scent-card__visual">
                 <img
-                  src="assets/images/monday/monday-main.png"
+                  class="scent-card__main-image"
+                  src="./assets/images/monday/monday-open.png"
                   alt="AVENUE 9 Monday 9AM 향수"
                 />
+
+                <img
+                  class="scent-card__sub-image scent-card__sub-image--top"
+                  src="./assets/images/monday/monday-back.png"
+                  alt=""
+                />
+
+                <img
+                  class="scent-card__sub-image scent-card__sub-image--bottom"
+                  src="./assets/images/monday/monday-main.png"
+                  alt=""
+                />
+
+                <span class="scent-card__arrow" aria-hidden="true">→</span>
               </figure>
             </article>
 
             <!-- Friday -->
             <article class="scent-card scent-card--friday">
-              <div class="scent-card__content">
-                <p class="scent-card__number">02</p>
-
-                <h3 class="scent-card__title">NEW YORK FRIDAYS</h3>
-
-                <p class="scent-card__description">
-                  Friday night in the city.<br />
-                  Bold, sensual and ready for the night.
-                </p>
-
-                <dl class="scent-card__notes">
-                  <div>
-                    <dt>TOP</dt>
-                    <dd>Pink Pepper · Mandarin</dd>
-                  </div>
-
-                  <div>
-                    <dt>HEART</dt>
-                    <dd>Rose · Suede</dd>
-                  </div>
-
-                  <div>
-                    <dt>BASE</dt>
-                    <dd>Amber · Sandalwood</dd>
-                  </div>
-                </dl>
-
-                <a href="./perfume2.html" class="button-link"> VIEW DETAILS </a>
-              </div>
-
-              <figure class="scent-card__media">
+              <figure class="scent-card__visual">
                 <img
-                  src="assets/images/friday/friday-main.png"
+                  class="scent-card__main-image"
+                  src="./assets/images/friday/friday-open-01.png"
                   alt="AVENUE 9 New York Fridays 향수"
                 />
+
+                <img
+                  class="scent-card__sub-image scent-card__sub-image--top"
+                  src="./assets/images/friday/friday-back.png"
+                  alt=""
+                />
+
+                <img
+                  class="scent-card__sub-image scent-card__sub-image--bottom"
+                  src="./assets/images/friday/friday-alt-01.png"
+                  alt=""
+                />
+
+                <span class="scent-card__arrow" aria-hidden="true">→</span>
               </figure>
+
+              <div class="scent-card__content">
+                <div class="scent-card__heading">
+                  <p class="scent-card__number">02</p>
+                  <h3 class="scent-card__title">NEW YORK FRIDAYS</h3>
+                </div>
+
+                <p class="scent-card__description">
+                  한 주가 끝나는 금요일,<br />
+                  도시 속에서 느끼는 해방감과 자유.
+                </p>
+
+                <ul
+                  class="scent-card__notes"
+                  aria-label="New York Fridays 향 노트"
+                >
+                  <li>Pink Pepper</li>
+                  <li>Rose</li>
+                  <li>Amber</li>
+                </ul>
+
+                <a href="./perfume2.html" class="button-link">VIEW DETAILS →</a>
+              </div>
             </article>
           </div>
         </div>
@@ -204,10 +218,11 @@
               </h2>
             </div>
 
-            <a href="./products.html" class="text-link"> VIEW MORE </a>
+            <a href="./products.html" class="text-link">VIEW MORE</a>
           </div>
 
           <div class="products__list">
+            <!-- Sunday -->
             <article class="product-card">
               <p class="product-card__category">PERFUME</p>
 
@@ -230,30 +245,57 @@
                 <p class="product-card__info">EAU DE PARFUM · 50ML</p>
               </a>
             </article>
-              <div
-                class="product-card__media product-card__media--placeholder"
-                aria-hidden="true"
-              ></div>
 
+            <!-- New York Fridays -->
+            <article class="product-card">
               <p class="product-card__category">HAIR MIST</p>
-              <h3 class="product-card__title">NEW YORK FRIDAYS</h3>
-              <p class="product-card__info">HAIR MIST · 80ML</p>
+
+              <a href="./products.html" class="product-card__link">
+                <div class="product-card__image">
+                  <img
+                    class="product-card__image-default"
+                    src="./assets/images/home/product-newyork.png"
+                    alt="New York Fridays 헤어 미스트"
+                  />
+
+                  <img
+                    class="product-card__image-hover"
+                    src="./assets/images/home/product-newyork-h.png"
+                    alt=""
+                  />
+                </div>
+
+                <h3 class="product-card__name">NEW YORK FRIDAYS</h3>
+                <p class="product-card__info">HAIR MIST · 80ML</p>
+              </a>
             </article>
 
+            <!-- Monday -->
             <article class="product-card">
-              <div
-                class="product-card__media product-card__media--placeholder"
-                aria-hidden="true"
-              ></div>
-
               <p class="product-card__category">HAND CARE</p>
-              <h3 class="product-card__title">MONDAY 9AM</h3>
-              <p class="product-card__info">HAND CREAM · 50ML</p>
+
+              <a href="./products.html" class="product-card__link">
+                <div class="product-card__image">
+                  <img
+                    class="product-card__image-default"
+                    src="./assets/images/home/product-monday.png"
+                    alt="Monday 9AM 핸드 크림"
+                  />
+
+                  <img
+                    class="product-card__image-hover"
+                    src="./assets/images/home/product-monday-h.png"
+                    alt=""
+                  />
+                </div>
+
+                <h3 class="product-card__name">MONDAY 9AM</h3>
+                <p class="product-card__info">HAND CREAM · 50ML</p>
+              </a>
             </article>
           </div>
         </div>
       </section>
-
       <!-- CTA -->
       <section class="cta" aria-labelledby="cta-title">
         <div class="cta__inner">
@@ -272,11 +314,12 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer__inner">
-        <a href="./index.html" class="footer__logo"> AVENUE 9 </a>
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">AVENUE 9</a>
+          <p class="footer__tagline">Everyday scent, made for the city.</p>
+        </div>
 
-        <p>Everyday scent, made for the city.</p>
-
-        <small>© 2026 AVENUE 9</small>
+        <small class="footer__copyright">© 2026 AVENUE 9</small>
       </div>
     </footer>
   </body>
