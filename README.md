@@ -82,10 +82,10 @@
   --font-family-display: 'Cinzel', serif;
   --font-family-body: 'Inter', sans-serif;
 }
+```
 
 Color, Spacing, Typography, Font Weight, Border Radius 등의 값을 변수로 관리하여
 페이지마다 일관된 디자인을 유지할 수 있도록 구성했습니다.
-
 
 ## 반응형 웹
 
@@ -96,7 +96,6 @@ Desktop의 다열 구조를 Mobile에서는 1열 구조로 변경
 화면 크기에 맞춰 이미지와 텍스트 배치 변경
 모바일에서도 메뉴의 터치 영역 확보
 콘텐츠가 화면 밖으로 넘치지 않도록 반응형 레이아웃 조정
-
 
 ## 웹 접근성
 
@@ -113,6 +112,7 @@ aria-label, aria-labelledby 활용
 prefers-reduced-motion을 통한 모션 감소 설정 대응
 
 ## 주요 구현 내용
+
 1. Scent Collection
 
 Desktop에서는 향수 정보와 이미지 콜라주를 2열 구조로 구성하고,
@@ -137,12 +137,14 @@ Mobile에서는 텍스트와 이미지를 위에서 아래로 읽을 수 있도�
 
 키보드 사용자가 반복되는 Header 메뉴를 거치지 않고
 본문으로 바로 이동할 수 있도록 Skip Link를 추가했습니다.
+
 ```
 
 <a href="#main-content" class="skip-link">본문 바로가기</a>
 
 <main id="main-content" tabindex="-1">
 ```
+
 4. Responsive Layout
 
 Desktop 디자인을 단순히 축소하는 방식이 아니라
