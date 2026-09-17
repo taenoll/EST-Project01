@@ -6,11 +6,12 @@
     <title>NEWYORK FRIDAYS</title>
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/perfume.css" />
-    <link rel="stylesheet" href="./styles/perfume1.css" />
+    <link rel="stylesheet" href="./styles/perfume2.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/component.css" />
   </head>
-  <body style="place-items: center; max-width: 1190px">
-    <header>
+  <body>
+    <header class="header">
       <div id="logo">AVENUE 9</div>
       <div class="menubar">
         <span>ABOUT</span>
@@ -19,178 +20,176 @@
       </div>
     </header>
 
-    <div style="background-color: var(--color-bg-page)">
-      <main>
+    <main class="main_container">
+      <img
+        src="./assets/images/collection/New York Fridays/background_img.png"
+        class="perfume2_background"
+        alt="도시 속 노란색 택시에서 내리는 여성"
+      />
+
+      <div class="perfume_card">
+        <h2>NEWYORK FRIDAYS</h2>
         <img
-          src="./assets/images/collection/New York Fridays/background_img.png"
-          class="perfume2_background"
-          alt="지하철에 검은색 옷을 입고 앉아있는 여성과 서있는 여성"
+          src="./assets/images/collection/New York Fridays/Product Alt 02.png"
+          class="perfume2_front"
+          alt="NEWYORK FRIADYS 향수병의 앞모습"
+          width="214"
         />
+        <div class="volume_container">
+          <button type="button" class="volume_btn">50ml</button>
+          <button type="button" class="volume_btn">70ml</button>
+        </div>
+        <button type="button" class="buynow_btn">BUY NOW</button>
+      </div>
+    </main>
 
-        <div class="perfume_card">
-          <h2>MONDAY 9AM</h2>
-          <img
-            src="./assets/images/collection/Monday 9AM/Product Alt 02.png"
-            class="perfume1_front"
-            alt="Monday 9AM 향수병의 앞모습"
-            width="214"
-          />
-          <div class="volume_container">
-            <button type="button" class="volume_btn">50ml</button>
-            <button type="button" class="volume_btn">70ml</button>
-          </div>
-          <button type="button" class="buynow_btn">BUY NOW</button>
-        </div>
-      </main>
+    <nav>
+      <p>
+        FRIDAY, WHEN THE WEEK ENDS<br />
+        THE SENSE OF LIBERATION AND FREEDOM FELT<br />
+        WITHIN THE CITY.
+      </p>
+      <div class="shortcut_bar">
+        <a href="#details">
+          <span>DETAILS</span>
+          <span class="arrow">></span>
+        </a>
+        <hr />
+        <a href="#ingredients">
+          <span>INGREDIENTS</span>
+          <span class="arrow">></span>
+        </a>
+        <hr />
+      </div>
+    </nav>
 
-      <nav>
-        <p>
-          A BUSY CITY MORNING AT 9AM,<br />
-          A CONFIDENT STRIDE THAT RESEMBLES<br />
-          THE PACE OF THE CITY.
-        </p>
-        <div class="shortcut_bar">
-          <a href="#details">
-            <span>DETAILS</span>
-            <span class="arrow">></span>
-          </a>
-          <hr />
-          <a href="#ingredients">
-            <span>INGREDIENTS</span>
-            <span class="arrow">></span>
-          </a>
-          <hr />
-        </div>
-      </nav>
-
-      <section class="mainnote">
-        <div class="mainnote_card">
-          <small>01.</small>
-          <div>
-            <h2>BERGAMOT</h2>
-            <img
-              src="./assets/images/collection/Monday 9AM/mainnote_bergamot.png"
-              class="mainnote_bergamot"
-              alt="베르가못 한 덩이리를 두 개로 자른 형태"
-            />
-          </div>
-        </div>
-        <div class="mainnote_card">
-          <small>02.</small>
-          <div>
-            <h2>ESPRESSO</h2>
-            <img
-              src="./assets/images/collection/Monday 9AM/mainnote_espresso.png"
-              class="mainnote_espresso"
-              alt="원두 덩어리"
-            />
-          </div>
-        </div>
-        <div class="mainnote_card">
-          <small>03.</small>
-          <div>
-            <h2>CEDARWOOD</h2>
-            <img
-              src="./assets/images/collection/Monday 9AM/mainnote_cedarwood.png"
-              class="mainnote_cedarwood"
-              alt="우드 조각 덩어리"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="details" id="details">
-        <div class="details_container">
-          <img
-            src="./assets/images/collection/Monday 9AM/Product Views Set.png"
-            class="product_views_set"
-            alt="MONDAY 9AM 향수병의 정면,측면,후면,비스듬한 모습과 구두 모양의 두껑"
-            width="1030"
-          />
-        </div>
-      </section>
-
-      <section class="ingredients" id="ingredients">
-        <div class="note_container">
-          <div class="notes">
-            <img
-              src="./assets/images/collection/Monday 9AM/blackpepper.png"
-              class="blackpepper"
-              alt="블랙페퍼 알갱이 덩어리"
-            />
-            <div>
-              <h3>BLACK PEPPER · BERGAMOT</h3>
-              <p>
-                차갑고 선명한 베르가못에 블랙페퍼가<br />
-                더해져 강렬하게 시작되는 아침
-              </p>
-            </div>
-            <img
-              src="./assets/images/collection/Monday 9AM/bergamot.png"
-              class="bergamot"
-              alt="베르가못 반 개 슬라이스가 물에 젖어 물방울이 아래로 떨어지려 하는 모습"
-            />
-          </div>
-          <div class="notes">
-            <img
-              src=""
-              class="espresso"
-              alt="에스프레소와 얼음이 함께 들어있는 투명 둥근 컵의 윗모습"
-            />
-            <div>
-              <h3>ESPRESSO · BLACKBERRY</h3>
-              <p>
-                쌉싸름한 에스프레소와 은은한 블랙베리가<br />
-                어우러져 세련되고 깊이 있는 분위기
-              </p>
-            </div>
-            <img
-              src="./assets/images/collection/Monday 9AM/blackberry.png"
-              class="blackberry"
-              alt="블랙베리 한 알의 정면모습"
-            />
-          </div>
-          <div class="notes">
-            <img
-              src="./assets/images/collection/Monday 9AM/whitemusk.png"
-              class="whitemusk"
-              alt="활짝 핀 화이트 머스크 흰 꽃의 윗모습"
-            />
-            <div>
-              <h3>WHITE MUSK · CEDARWOOD</h3>
-              <p>
-                드라이한 우디 향과 깨끗한 화이트 머스크가<br />
-                세련되고 중성적인 잔향
-              </p>
-            </div>
-            <img
-              src="./assets/images/collection/Monday 9AM/cedarwood.png"
-              class="cedarwood"
-              alt="나무 원목의 단면"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="description">
+    <section class="mainnote">
+      <div class="mainnote_card">
+        <small>01.</small>
         <div>
-          A MORNING IN A FAST-MOVING CITY AND<br />
-          THE ENDLESSLY CONTINUING COMMUTE.<br />
-          IN THE BUSTLING STREETS, THE CITY'S ENERGY BEGINS TO AWAKEN.<br />
-          MONDAY 9AM IS AN INCENSE FOR THOSE WHO BEGIN THEIR DAY<br />
-          WITH THE PHYTHM OF A FAST-MOVING CITY.<br />
-          선명한 베르가못으로 시작해 쌉싸름한 에스프레소와 블랙베리가 깊이를
-          더하고,<br />
-          드라이한 시더우드와 화이트 머스크가 세련된 잔향을 남깁니다.<br />
-          <span
-            >바쁜 도시의 아침 속에서도 자신만의 페이스를 잃지 않는, 단정하고
-            중성적인 향</span
-          >
+          <h2>GRAPEFRUIT</h2>
+          <img
+            src="./assets/images/collection/New York Fridays/mainnote_grapefruit.png"
+            class="mainnote_grapefruit"
+            alt="자몽 슬라이스된 단면 덩이리"
+          />
         </div>
-      </section>
-    </div>
+      </div>
+      <div class="mainnote_card">
+        <small>02.</small>
+        <div>
+          <h2>JASMINE</h2>
+          <img
+            src="./assets/images/collection/New York Fridays/mainnote_jasmine.png"
+            class="mainnote_jasmine"
+            alt="흰색 자스민 꽃들"
+          />
+        </div>
+      </div>
+      <div class="mainnote_card">
+        <small>03.</small>
+        <div>
+          <h2>AMBER</h2>
+          <img
+            src="./assets/images/collection/New York Fridays/mainnote_amber.png"
+            class="mainnote_amber"
+            alt="노란색 엠버 돌조각들"
+          />
+        </div>
+      </div>
+    </section>
 
-    <footer>
+    <section class="details" id="details">
+      <div class="details_container">
+        <img
+          src="./assets/images/collection/New York Fridays/Product Views Set.png"
+          class="product_views_set"
+          alt="NEWYORK FRIDAYS 향수병의 정면,측면,후면,비스듬한 모습과 구두 모양의 두껑"
+          width="1030"
+        />
+      </div>
+    </section>
+
+    <section class="ingredients" id="ingredients">
+      <div class="note_container">
+        <div class="notes">
+          <img
+            src="./assets/images/collection/New York Fridays/grapefruit.png"
+            class="grapefruit"
+            alt="자몽의 단면 일부"
+          />
+          <div>
+            <h3>GRAPEFRUIT · PINK PEPPER</h3>
+            <p>
+              차갑고 선명한 베르가못에 블랙페퍼가<br />
+              더해져 강렬하게 시작되는 아침
+            </p>
+          </div>
+          <img
+            src="./assets/images/collection/New York Fridays/pinkpepper.png"
+            class="pinkpepper"
+            alt="핑크페퍼 알갱이 덩어리"
+          />
+        </div>
+        <div class="notes">
+          <img
+            src="./assets/images/collection/New York Fridays/jasmine.png"
+            class="jasmine"
+            alt="활짝 핀 흰색 자스민 꽃과 꽃 봉우리들 "
+          />
+          <div>
+            <h3>JASMINE · SUEDE</h3>
+            <p>
+              쌉싸름한 자몽과 톡 쏘는 핑크페퍼가<br />
+              어우러져 선명하고 생기 있게 시작되는 향
+            </p>
+          </div>
+          <img
+            src="./assets/images/collection/New York Fridays/"
+            class="suede"
+            alt="갈색 스웨이드 천의 일부"
+          />
+        </div>
+        <div class="notes">
+          <img
+            src="./assets/images/collection/New York Fridays/patchouli.png"
+            class="suede"
+            alt="초록색 패출리 잎들"
+          />
+          <div>
+            <h3>PATCHOULI · AMBER</h3>
+            <p>
+              따뜻한 엠버와 깊이 있는 패출리가 어우러져,<br />
+              시간이 지날수록 관능적으로 남는 잔향
+            </p>
+          </div>
+          <img
+            src="./assets/images/collection/New York Fridays/amber.png"
+            class="cedarwood"
+            alt="엠버 돌조각 일부"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="description">
+      <div>
+        ON A FRIDAY EVENING WHEN THE WEEK'S TENSION EASES,<br />
+        A MOMENT WHEN THE STREET LIGHTS AND MUSIC,<br />
+        AND THE FAMILIAR CITY, FEEL A LITTLE DIFFERENT.<br />
+        NEWYORK FIRDAYS IS A FREE NIGHT, BREAKING AWAY FROM A FIXED ROUTINE<br />
+        IT IS A SCENT FOR THE CHOOSER.<br />
+        톡 쏘는 핑크 페퍼와 만다린으로 시작해 로즈와 스웨이드가 대담한 인상을
+        남기고,<br />
+        따뜻한 엠버와 샌달우드가 밤이 깊어질수록 부드럽고 짙게 이어집니다.<br />
+        <span
+          >도시의 밤 속에서 가장 자유로운 자신을 드러내는, 대담하고 관능적인
+          향.</span
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
       <ul class="footer1">
         <li style="font-weight: bold">AVENUE 9</li>
         <li>EVERYDAY SCENT<br />MADE FOR THE CITY.</li>

@@ -1,0 +1,18 @@
+.perfume1_container {
+  .perfume1_poster {
+    position: relative;
+  }
+  h1 {
+    position: absolute;
+  }
+  button {
+    position: absolute;
+  }
+}
+
+.perfume2_container {
+  .perfume2_poster {
+    position: relative;
+  }
+  position: absolute;
+}

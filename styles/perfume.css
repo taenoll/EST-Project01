@@ -1,39 +1,28 @@
-header {
+/* =========================
+   Common
+========================= */
+body {
+  color: var(--color-text-primary);
+  background: var(--color-bg-page);
+}
+
+/* =========================
+    Main
+========================= */
+.main_container {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 1190px;
-  height: 75px;
-
-  background-color: var(--color-text-inverse);
-  font-size: var(--text-body);
-
-  #logo {
-    margin-left: var(--spacing-4xl);
-  }
-  .menubar {
-    display: flex;
-    justify-content: space-evenly;
-    width: 650px;
-    margin-right: var(--spacing-lg);
-  }
-}
-
-main {
   img {
-    position: relative;
-  }
-  .buynow_btn {
-    background-color: var(--color-text-primary);
-    color: var(--color-text-inverse);
-    font-weight: bold;
-    width: 250px;
-    height: 50px;
-    padding: var(--spacing-sm);
+    width: 100%;
   }
 }
 
+/* =========================
+    Nav (shortcut)
+========================= */
 nav {
+  font-family: var(--font-family-display);
   padding-top: var(--spacing-5xl);
   padding-bottom: var(--spacing-6xl);
   padding-inline: var(--spacing-5xl);
@@ -42,8 +31,8 @@ nav {
   align-items: center;
 
   p {
-    line-height: var(--spacing-xl);
-    font-size: var(--text-body-lg);
+    line-height: var(--spacing-2xl);
+    font-size: var(--text-heading-sm);
   }
 
   .shortcut_bar {
@@ -65,6 +54,9 @@ nav {
   }
 }
 
+/* =========================
+    Main Note
+========================= */
 .mainnote {
   display: flex;
   justify-content: center;
@@ -75,11 +67,12 @@ nav {
     background-color: var(--color-text-inverse);
     width: 290px;
     height: 580px;
+    font-family: var(--font-family-display);
     padding: var(--spacing-md);
 
     small {
       display: inline-block;
-      font-size: var(--text-caption);
+      font-size: var(--text-body);
       margin-bottom: var(--spacing-2xl);
     }
     h2 {
@@ -99,23 +92,12 @@ nav {
   }
 }
 
-.details {
-  place-items: center;
-  padding: var(--spacing-sm);
-  margin-bottom: var(--spacing-5xl);
-
-  .details_container {
-    background-color: var(--color-brand-monday);
-    width: 1135px;
-    height: 1100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
+/* =========================
+    Ingredients
+========================= */
 .ingredients {
   background-color: var(--color-text-inverse);
+  font-family: var(--font-family-display);
   .note_container {
     display: grid;
     grid-template-rows: repeat(3, minmax(390, 1fr));
@@ -130,7 +112,7 @@ nav {
   div {
     align-self: center;
     text-align: center;
-    font-size: var(--text-body-lg);
+    font-size: var(--text-label);
 
     h3 {
       font-weight: bold;
@@ -142,31 +124,18 @@ nav {
   }
 }
 
-.description {
-  background-color: var(--color-brand-monday);
-  color: var(--color-text-inverse);
-  font-weight: bold;
-  text-align: center;
-  height: 665px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  line-height: var(--spacing-2xl);
-  font-size: var(--text-label);
-  span {
-    text-decoration: underline;
-  }
-}
-
-footer {
+/* =========================
+    Footer
+========================= */
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
   background-color: var(--color-bg-footer);
-  width: 1190px;
+  width: 100%;
   height: auto-fit;
+  font-family: var(--font-family-display);
 
   ul {
     padding: var(--spacing-xl);
