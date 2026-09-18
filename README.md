@@ -187,4 +187,4 @@ EST-Project01/
 
 배포
 
-배포 후 링크를 추가할 예정입니다.
+(https://taenoll.github.io/EST-Project01/)
