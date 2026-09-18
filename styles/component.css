@@ -46,7 +46,23 @@
   font-size: var(--text-label);
   width: 250px;
   height: 50px;
-  padding: 10px;
+  padding: var(--spacing-sm);
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: var(--color-text-inverse);
+    color: var(--color-text-primary);
+  }
+}
+@media (max-width: 390px) {
+  .buynow_btn {
+    width: 80px;
+    height: 10px;
+    font-size: var(--text-caption);
+  }
 }
 
 /* =========================
