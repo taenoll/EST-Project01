@@ -75,8 +75,6 @@ img {
 }
 
 .about__slogan {
-  margin-top: var(--spacing-xl);
-
   font-family: var(--font-family-display);
   font-size: var(--text-heading-sm);
   line-height: 1.1;
@@ -222,8 +220,34 @@ img {
   gap: var(--spacing-3xl);
 }
 
+.about__content {
+  position: relative;
+  z-index: 1;
+}
+
+.about__title {
+  margin-bottom: var(--spacing-sm);
+}
+
+.about__description {
+  display: grid;
+  gap: var(--spacing-lg);
+
+  max-width: 420px;
+  margin-bottom: var(--spacing-lg);
+
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+.about__slogan {
+  margin-bottom: var(--spacing-md);
+}
+
 .about__media {
   position: relative;
+
+  margin-top: var(--spacing-2xl);
   margin-left: calc(var(--spacing-xl) * -1);
 }
 
@@ -239,31 +263,21 @@ img {
   pointer-events: none;
 }
 
-.about__content {
-  position: relative;
-  z-index: 1;
+/* 이미지 피그마 비율로 */
+.about__media img {
+  width: 100%;
+  aspect-ratio: 683 / 854;
+  object-fit: cover;
 }
 
-.about__title {
-  color: var(--color-text-display-muted);
-}
+.about__slogan::before {
+  content: '';
+  display: block;
 
-.about__description {
-  display: grid;
-  gap: var(--spacing-md);
+  width: 94px;
+  margin-bottom: var(--spacing-md);
 
-  max-width: 480px;
-  margin-top: var(--spacing-xl);
-
-  font-size: var(--text-body);
-  line-height: 1.6;
-}
-
-.about__slogan {
-  margin-top: var(--spacing-xl);
-
-  font-size: var(--text-heading-sm);
-  line-height: 1.1;
+  border-top: 1px solid currentColor;
 }
 
 /* =================================================

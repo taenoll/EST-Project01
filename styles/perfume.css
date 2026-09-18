@@ -192,6 +192,9 @@ nav {
       height: auto;
     }
   }
+  p {
+    line-height: var(--spacing-xl);
+  }
 }
 
 /* =========================
