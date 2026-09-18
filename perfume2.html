@@ -81,6 +81,7 @@
             src="./assets/images/collection/New York Fridays/mainnote_grapefruit.png"
             class="mainnote_grapefruit"
             alt="자몽 슬라이스된 단면 덩이리"
+            style="margin-inline: 10px; margin-bottom: 10px"
           />
         </div>
       </div>
@@ -92,6 +93,7 @@
             src="./assets/images/collection/New York Fridays/mainnote_jasmine.png"
             class="mainnote_jasmine"
             alt="흰색 자스민 꽃들"
+            style="margin-inline: 10px; margin-bottom: 10px"
           />
         </div>
       </div>
@@ -103,6 +105,7 @@
             src="./assets/images/collection/New York Fridays/mainnote_amber.png"
             class="mainnote_amber"
             alt="노란색 엠버 돌조각들"
+            style="margin-inline: 10px; margin-bottom: 10px"
           />
         </div>
       </div>
@@ -114,7 +117,7 @@
           src="./assets/images/collection/New York Fridays/Product Views Set.png"
           class="product_views_set"
           alt="NEWYORK FRIDAYS 향수병의 정면,측면,후면,비스듬한 모습과 구두 모양의 두껑"
-          width="1030"
+          width="1030px"
         />
       </div>
     </section>
@@ -122,31 +125,45 @@
     <section class="ingredients" id="ingredients">
       <div class="note_container">
         <div class="notes">
-          <img
-            src="./assets/images/collection/New York Fridays/grapefruit.png"
-            class="grapefruit"
-            alt="자몽의 단면 일부"
-          />
-          <div>
+          <div
+            class="img_container"
+            id="img_container1"
+            style="margin-bottom: var(--spacing-2xl)"
+          >
+            <img
+              src="./assets/images/collection/New York Fridays/grapefruit.png"
+              class="grapefruit"
+              alt="자몽의 단면 일부"
+            />
+            <img
+              src="./assets/images/collection/New York Fridays/pinkpepper.png"
+              class="pinkpepper"
+              alt="핑크페퍼 알갱이 덩어리"
+            />
+          </div>
+          <div class="middle_description">
             <h3>GRAPEFRUIT · PINK PEPPER</h3>
             <p>
               차갑고 선명한 베르가못에 블랙페퍼가<br />
               더해져 강렬하게 시작되는 아침
             </p>
           </div>
-          <img
-            src="./assets/images/collection/New York Fridays/pinkpepper.png"
-            class="pinkpepper"
-            alt="핑크페퍼 알갱이 덩어리"
-          />
         </div>
+
         <div class="notes">
-          <img
-            src="./assets/images/collection/New York Fridays/jasmine.png"
-            class="jasmine"
-            alt="활짝 핀 흰색 자스민 꽃과 꽃 봉우리들 "
-          />
-          <div>
+          <div class="img_container">
+            <img
+              src="./assets/images/collection/New York Fridays/jasmine.png"
+              class="jasmine"
+              alt="활짝 핀 흰색 자스민 꽃과 꽃 봉우리들 "
+            />
+            <img
+              src="./assets/images/collection/New York Fridays/suede.png"
+              class="suede"
+              alt="갈색 스웨이드 천의 일부"
+            />
+          </div>
+          <div class="middle_description">
             <h3>JASMINE · SUEDE</h3>
             <p>
               쌉싸름한 자몽과 톡 쏘는 핑크페퍼가<br />
@@ -159,24 +176,27 @@
             alt="갈색 스웨이드 천의 일부"
           />
         </div>
+
         <div class="notes">
-          <img
-            src="./assets/images/collection/New York Fridays/patchouli.png"
-            class="suede"
-            alt="초록색 패출리 잎들"
-          />
-          <div>
+          <div class="img_container" style="align-items: flex-end">
+            <img
+              src="./assets/images/collection/New York Fridays/patchouli.png"
+              class="suede"
+              alt="초록색 패출리 잎들"
+            />
+            <img
+              src="./assets/images/collection/New York Fridays/amber.png"
+              class="cedarwood"
+              alt="엠버 돌조각 일부"
+            />
+          </div>
+          <div class="middle_description">
             <h3>PATCHOULI · AMBER</h3>
             <p>
               따뜻한 엠버와 깊이 있는 패출리가 어우러져,<br />
               시간이 지날수록 관능적으로 남는 잔향
             </p>
           </div>
-          <img
-            src="./assets/images/collection/New York Fridays/amber.png"
-            class="cedarwood"
-            alt="엠버 돌조각 일부"
-          />
         </div>
       </div>
     </section>
@@ -198,25 +218,16 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-      <ul class="footer1">
-        <li style="font-weight: bold">AVENUE 9</li>
-        <li>EVERYDAY SCENT<br />MADE FOR THE CITY.</li>
-        <li></li>
-      </ul>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">AVENUE 9</a>
+          <p class="footer__tagline">Everyday scent, made for the city.</p>
+        </div>
 
-      <ul class="footer2">
-        <li>NAVIGATION</li>
-        <li>ABOUT</li>
-        <li>COLLECTION</li>
-        <li>PRODUCT</li>
-      </ul>
-
-      <ul class="footer3">
-        <li>FOLLOW / CONTACT</li>
-        <li>INSTAGRAM</li>
-        <li>CONTACT</li>
-      </ul>
+        <small class="footer__copyright">© 2026 AVENUE 9</small>
+      </div>
     </footer>
   </body>
 </html>
